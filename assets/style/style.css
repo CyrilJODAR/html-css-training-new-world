@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "roboto-regular";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "roboto-regular";
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}
+a:visited{color: white;}
+h1{
+    color: white;
+    font-size: 2rem;
+}
+nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    }
+/*  */
+/* HEADER CSS */
+/*  */
+header, h1, h2, h3{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+header>nav>ul{
+    width: 30%;
+}
+
+nav>ul>li{
+    padding: 0px 20px;
+}
+header>nav>ul>li:not(:first-child){
+    border-left: 2px solid black;
+}
+header>nav>ul>li>a{
+    color: black;
+}
+#accueil a:visited{
+    color: black;
+}
+header>nav{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+}
+#bando>img{
+    padding: 5% 35% 0;
+}
+/*  */
+/* MAIN CSS */
+/*  */
+#bando{
+    background-image: url("../img/new-world-amazon-jeu.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main>section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 2% 20%;
+    text-align: center;
+    margin-bottom: 2%;
+
+}
+main>#presentation>a{
+    padding: 10px 25px;
+    background-color: orange;
+    color: white;
+    margin: 20px 0;
+}
+main>#presentation>h2{
+    font-size: 1.5rem;
+}
+main>#actualites>div{
+    display: flex;
+    justify-content: space-between;
+}
+main>#actualites>div>div{
+width: 30%;
+position: relative;
+}
+main>#actualites>div>div>h3{
+position: absolute;
+}
+div>.actualitesDisplay>img{
+    width: 100%;
+}
+div>.actualitesDisplay{
+    background-color: #2D2E2E;
+    color: white;
+    height: 90%;
+    margin-top: 50px;
+    text-align: start;
+    padding-bottom: 30px;
+}
+div>.actualitesDisplay>p{
+    margin: 0px 10px;
+    overflow: hidden;
+    max-height: 30vh;
+
+}
+div>.actualitesDisplay>h4{
+    padding-left: 10px;
+}
+/*  */
+/* FOOTER CSS */
+/*  */
+footer{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer>a{
+    color: white;
+
+}
+footer img{
+    width: 80px;
+    padding: 10px 0;
+}
+footer>nav>ul>li:not(:first-child){
+    border-left: 2px solid white;
+}
+/*  */
+/* RESPONSIVE */
+/*  */
+@media screen and (max-width: 900px) {
+    #accueil>nav>ul{
+        padding: 0 0;
+    }
+    nav>ul{
+        flex-direction: column;
+    }
+    header>nav>ul>li:not(:first-child){
+        border: none;
+    }
+    footer>nav>ul>li:not(:first-child){
+        border-left: none;
+    }
+    header>nav{
+        position: initial;
+    }
+    header>nav>ul>li:first-child{
+        display: none;
+    }
+    main>section{
+        margin-bottom: 10%;
+    }
+    #bando>img{
+        padding: 5% 30% 0;
+    }
+    footer>nav>ul{
+        padding: 0 0;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+
+}
+@media screen and (max-width: 1300px){
+    main>#actualites>div{
+        flex-direction: column;
+    }
+    main>#actualites>div>div{
+        width: 100%;
+    }
+    footer>img{
+        width: 100px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer>nav>ul{
+        text-align: center;
+    }
+}
